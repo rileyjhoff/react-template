@@ -1,0 +1,6 @@
+.Footer {
+  position: sticky;
+  top: 100vh;
+  background: pink;
+  height: 30px;
+}
