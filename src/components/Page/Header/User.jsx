@@ -17,7 +17,7 @@ export default function User() {
   return (
     <button className={className} onClick={handleClick}>
       User
-      <div className={styles.MenuContainer}>
+      <div className={styles.UserMenu}>
         <Link to="auth/login">Sign In</Link>
         <Link to="auth/sign-up">Sign Up</Link>
       </div>

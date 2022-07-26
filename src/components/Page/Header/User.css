@@ -7,13 +7,13 @@
   border-radius: 10px;
 
   &.Open {
-    .MenuContainer {
+    .UserMenu {
       display: flex;
       flex-direction: column;
     }
   }
 
-  .MenuContainer {
+  .UserMenu {
     gap: 10px;
     position: absolute;
     display: none;
