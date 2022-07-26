@@ -10,6 +10,7 @@ import List from './List/List';
 import About from './About/About';
 
 export default function App() {
+  // please work
   return <Router>
     <Routes>
       <Route path="/" element={<Layout />}>
