@@ -3,6 +3,8 @@
 }
 
 :root {
+  --primary-font: 'Inter', "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  
   --white: #fbffff;
   --black: #0A090C;
   --blue-navy: #05445E;
