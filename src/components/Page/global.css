@@ -2,5 +2,21 @@
   box-sizing: border-box;
 }
 
+:root {
+  --white: #fbffff;
+  --black: #0A090C;
+  --blue-navy: #05445E;
+  --blue-misty: #385E72;
+  --blue-grotto: #6AABD2;
+  --blue-turquoise: #77DDF9;
+  --blue-green: #75E6DA;
+  --blue-baby: #EAFBFF;
+  --blue-gray: #D9E4EC;
+  --green-neon: #A3EBB1;
+  --green-kelly: #18A558;
+}
+
 body {
+  background: var(--white);
+  color: var(--black);
 }

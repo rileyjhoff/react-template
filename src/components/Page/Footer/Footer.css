@@ -1,6 +1,6 @@
 .Footer {
   position: sticky;
   top: 100vh;
-  background: pink;
+  background: var(--blue-gray);
   height: 30px;
 }
