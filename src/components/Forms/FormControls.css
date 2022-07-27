@@ -15,7 +15,7 @@
     font-size: 0.9rem;
   }
 
-  input, textarea {
+  input, textarea, select {
     display: block;
     width: 100%;
     height: 35px;
@@ -40,7 +40,7 @@
   &:not(:last-child) {
     margin-bottom: 20px;
   }
-  
+
   legend {
     text-align: center;
     padding: 0px 5px;

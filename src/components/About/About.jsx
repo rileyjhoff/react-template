@@ -1,4 +1,4 @@
-import { Fieldset, InputControl, TextAreaControl } from '../Forms/FormControls';
+import { Fieldset, InputControl, SelectControl, TextAreaControl } from '../Forms/FormControls';
 import styles from './About.css';
 
 export default function About() {
@@ -23,6 +23,19 @@ export default function About() {
           />
         </Fieldset>
         <Fieldset legend="Additional Info">
+          <SelectControl label="Favorite Single Digit Number:">
+            <option disabled selected>--Select an option--</option>
+            <option value='null'>Don't have one</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+          </SelectControl>
           <TextAreaControl 
             label="Bio:" 
             placeholder="Include some information about yourself"

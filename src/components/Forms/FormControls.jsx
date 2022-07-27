@@ -25,6 +25,14 @@ export function InputControl({ label, ...rest }) {
   );
 }
 
+export function SelectControl({ label, children, ...rest }) {
+  return (
+    <FormControl label={label}>
+      <select {...rest} >{children}</select>
+    </FormControl>
+  );
+}
+
 export function TextAreaControl({ label, ...rest }) {
   return (
     <FormControl label={label}>
