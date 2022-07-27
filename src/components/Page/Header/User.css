@@ -1,4 +1,8 @@
 .User {
+  font-size: 0.75rem;
+  @media (min-width: 750px) {
+    font-size: 1rem;
+  }
   cursor: pointer;
   padding: 3px 7px;
   background-color: white;

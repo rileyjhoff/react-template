@@ -1,3 +1,9 @@
 .About {
   padding: var(--padding);
+
+  form {
+    background: var(--blue-turquoise);
+    padding: calc(var(--padding) * 2);
+    width: 300px;
+  }
 }
