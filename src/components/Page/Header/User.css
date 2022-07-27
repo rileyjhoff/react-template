@@ -1,5 +1,4 @@
 .User {
-  margin-right: 20px;
   cursor: pointer;
   padding: 3px 7px;
   background-color: white;
@@ -14,13 +13,13 @@
   }
 
   .UserMenu {
-    gap: 10px;
+    gap: 20px;
     position: absolute;
     display: none;
     top: 100%;
     right: 0;
-    padding: 20px 10px;
+    padding: var(--padding);
     width: fit-content;
-    background: rgba(144, 238, 144, 0.948);
+    background: var(--header-color);
   }
 }
