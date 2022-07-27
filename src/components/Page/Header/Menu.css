@@ -3,7 +3,11 @@
   height: var(--header-height);
   width: var(--header-height);
   font-size: 1.2rem;
+  
   cursor: pointer;
+  user-select: none;
+  outline: 0;
+
 
   &::before {
     content: '☰';
