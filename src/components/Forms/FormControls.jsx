@@ -32,3 +32,12 @@ export function TextAreaControl({ label, ...rest }) {
     </FormControl>
   );
 }
+
+export function Fieldset({ legend, children }) {
+  return (
+    <fieldset className={styles.Fieldset}>
+      <legend>{legend}</legend>
+      {children}
+    </fieldset>
+  )
+}

@@ -53,7 +53,8 @@
       {
         "before": true,
         "after": true
-      }
+      },
+      
     ],
     "array-bracket-spacing": "error",
     "prefer-const": "error",
@@ -66,6 +67,7 @@
     "babel/no-invalid-this": 1,
     "babel/semi": 0,
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off"
   }
 }

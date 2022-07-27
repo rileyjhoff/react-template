@@ -1,4 +1,4 @@
-import { InputControl, TextAreaControl } from '../Forms/FormControls';
+import { Fieldset, InputControl, TextAreaControl } from '../Forms/FormControls';
 import styles from './About.css';
 
 export default function About() {
@@ -6,24 +6,28 @@ export default function About() {
     <section className={styles.About}>
       Hello World from the About Page
       <form>
-        <InputControl 
-          label="Email:"
-          name="email"
-          placeholder="Enter your email"
-          type="email"
-          required
-        />
-        <InputControl 
-          label="Password:"
-          name="password"
-          placeholder="Select a password"
-          type="password"
-          required
-        />
-        <TextAreaControl 
-          label="Bio:" 
-          placeholder="Include some information about yourself"
-        />
+        <Fieldset legend="Credentials">
+          <InputControl 
+            label="Email:"
+            name="email"
+            placeholder="Enter your email"
+            type="email"
+            required
+          />
+          <InputControl 
+            label="Password:"
+            name="password"
+            placeholder="Select a password"
+            type="password"
+            required
+          />
+        </Fieldset>
+        <Fieldset legend="Additional Info">
+          <TextAreaControl 
+            label="Bio:" 
+            placeholder="Include some information about yourself"
+          />
+        </Fieldset>
       </form>
     </section>
   );

@@ -5,6 +5,10 @@
     margin-top: 20px;
   }
 
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   span {
     display: block;
     margin-bottom: 2px;
@@ -23,5 +27,22 @@
   textarea {
     resize: vertical;
     height: 6rem;
+  }
+}
+
+.Fieldset {
+  border-top: 4px double black;
+  
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
+  legend {
+    text-align: center;
+    padding: 0px 5px;
   }
 }
