@@ -1,4 +1,4 @@
-import { Fieldset, InputControl, SelectControl, TextAreaControl } from '../Forms/FormControls';
+import { CheckboxControl, Fieldset, InputControl, SelectControl, TextAreaControl } from '../Forms/FormControls';
 import styles from './About.css';
 
 export default function About() {
@@ -36,6 +36,7 @@ export default function About() {
             <option value='8'>8</option>
             <option value='9'>9</option>
           </SelectControl>
+          <CheckboxControl label="Do you like sushi?" text="Yes" />
           <TextAreaControl 
             label="Bio:" 
             placeholder="Include some information about yourself"
