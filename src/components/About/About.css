@@ -4,6 +4,7 @@
   form {
     background: var(--blue-turquoise);
     padding: calc(var(--padding) * 2);
+    padding-top: calc(var(--padding) * 1.5);
     width: 300px;
   }
 }

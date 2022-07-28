@@ -1,0 +1,15 @@
+.SubmitButton {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--blue-green);
+  border: 2px solid var(--blue-misty);
+  border-radius: 5px;
+
+  &:hover {
+    background-color: var(--blue-misty);
+    border-color: var(--blue-green);
+    color: white;
+  }
+}

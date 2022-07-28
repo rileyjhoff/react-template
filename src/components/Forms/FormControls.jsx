@@ -1,5 +1,4 @@
 import styles from './FormControls.css';
-import classNames from 'classnames';
 
 
 function FormControl({ label, children }) {
@@ -59,5 +58,5 @@ export function Fieldset({ legend, children }) {
       <legend>{legend}</legend>
       {children}
     </fieldset>
-  )
+  );
 }
