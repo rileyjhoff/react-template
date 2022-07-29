@@ -1,3 +1,36 @@
 .List {
   padding: var(--padding);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+
+  .Card {
+    padding: 10px;
+    border: 1px solid var(--blue-turquoise);
+    background: var(--blue-baby);
+    display: grid;
+    grid-template-rows: 100px 30px 10px;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12),
+      0 3px 3px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18),
+        0 6px 6px rgba(0, 0, 0, 0.24);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .Header {
+      font-weight: 600;
+    }
+  }
 }
