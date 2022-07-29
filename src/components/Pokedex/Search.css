@@ -1,0 +1,18 @@
+.Search {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(125px, 175px))
+    50px;
+  align-items: end;
+  gap: 2px;
+  padding: 0 var(--padding);
+
+  label {
+    margin: 20px 0;
+  }
+
+  button {
+    margin: 35px 0 20px;
+    height: 35px;
+  }
+}
