@@ -1,3 +1,53 @@
 .Pokedex {
   padding: var(--padding);
 }
+
+.flex {
+  padding-right: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  button {
+    height: 50px;
+    margin: 5px;
+    background-color: var(--blue-green);
+    border: 2px solid var(--blue-misty);
+    padding: 10px;
+    border-radius: 5px;
+    
+    &:not([disabled]) {
+      cursor: pointer;
+    }
+
+    &:hover:not([disabled]) {
+      background-color: var(--blue-misty);
+      border-color: var(--blue-green);
+      color: white;
+    }
+  }
+}
+
+.bottomFlex {
+  padding: 0 var(--padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    height: 50px;
+    margin: 5px;
+    background-color: var(--blue-green);
+    border: 2px solid var(--blue-misty);
+    padding: 10px;
+    border-radius: 5px;
+    
+    &:not([disabled]) {
+      cursor: pointer;
+    }
+
+    &:hover:not([disabled]) {
+      background-color: var(--blue-misty);
+      border-color: var(--blue-green);
+      color: white;
+    }
+  }
+}

@@ -39,7 +39,7 @@ export default function Search() {
         value={formSearch.type}
         onChange={handleChange}
       >
-        <option value={''}>All</option>
+        <option value={''}>All (801)</option>
         {types.map(({ type, count }) => (
           <TypeOption key={type} type={type} count={count} />
         ))}

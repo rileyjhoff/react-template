@@ -6,14 +6,23 @@ import Search from './Search';
 
 export default function Pokedex() {
   const [searchParams] = useSearchParams();
-  const { pokedex } = usePokedex(searchParams);
-
+  const { pokedex, addPage, backPage, backDisabled, addDisabled } = usePokedex(searchParams);
   if (!pokedex) return null;
 
   return (
     <div className={styles.Pokedex}>
-      <Search />
+      <div className={styles.flex}>
+        <Search />
+        <div>
+          <button onClick={backPage} disabled={backDisabled}>Back</button>
+          <button onClick={addPage} disabled={addDisabled}>Next</button>
+        </div>
+      </div>
       <PokemonList pokedex={pokedex} />
+      {pokedex.length > 30 && <div className={styles.bottomFlex}>
+        <button onClick={backPage} disabled={backDisabled}>Back</button>
+        <button onClick={addPage} disabled={addDisabled}>Next</button>
+      </div>}
     </div>
   );
 }
