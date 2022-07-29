@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getPokedex } from '../services/pokedex-service.js';
+import { getPokedex, getTypes } from '../services/pokedex-service.js';
 
 export function usePokedex(searchParams) {
   const [error, setError] = useState(null);
@@ -26,4 +26,21 @@ export function usePokedex(searchParams) {
   }, [searchParams]);
 
   return { pokedex, error, count };
+}
+
+export function useTypes() {
+  const [types, setTypes] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetch = async () => {
+      const { data, error } = await getTypes();
+      setTypes(data);
+      setError(error);
+    };
+
+    fetch();
+  }, []);
+
+  return { types, error };
 }

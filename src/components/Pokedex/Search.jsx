@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
+import { useTypes } from '../../state/hooks/pokedex.js';
 import { useSearch } from '../../state/hooks/search.js';
 import SubmitButton from '../Buttons/SubmitButton.jsx';
-import { InputControl } from '../Forms/FormControls.jsx';
+import { InputControl, SelectControl } from '../Forms/FormControls.jsx';
 import styles from './Search.css';
 
 export default function Search() {
+  const { types } = useTypes();
   const { params, setParams } = useSearch();
   const [formSearch, setFormSearch] = useState({});
   const { pokemon, type } = params;
+
 
   useEffect(() => {
     setFormSearch({ pokemon, type });
@@ -30,13 +33,26 @@ export default function Search() {
         value={formSearch.pokemon}
         onChange={handleChange}
       />
-      <InputControl
+      <SelectControl
         label="Type"
         name="type"
         value={formSearch.type}
         onChange={handleChange}
-      />
+      >
+        <option value={''}>All</option>
+        {types.map(({ type, count }) => (
+          <TypeOption key={type} type={type} count={count} />
+        ))}
+      </SelectControl>
       <SubmitButton>🔍</SubmitButton>
     </form>
+  );
+}
+
+function TypeOption({ type, count }) {
+  return (
+    <option value={type}>
+      {`${type.charAt(0).toUpperCase() + type.slice(1)} (${count})`}
+    </option>
   );
 }
