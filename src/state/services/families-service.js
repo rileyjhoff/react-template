@@ -18,19 +18,19 @@ export async function getAllFamilies() {
 }
 
 export async function addFamily(family) {
-  const response = await client.from('families').insert([family]);
+  const response = await client.from('families').insert([family]).single();
 
   return response;
 }
 
 export async function updateFamily(family) {
-  const response = await client.from('families').update([family]).match({ id: family.id });
+  const response = await client.from('families').update([family]).match({ id: family.id }).single();
 
   return response;
 }
 
 export async function removeFamily(id) {
-  const response = await client.from('families').delete().match({ id });
+  const response = await client.from('families').delete().match({ id }).single();
 
   return response;
 }
