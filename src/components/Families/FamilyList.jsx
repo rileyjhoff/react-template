@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useFamilies } from '../../state/hooks/families.js';
 import Family from './Family';
 import styles from './FamilyList.css';
 
 export default function FamilyList() {
-  const [families, setFamilies] = useState([{ id: 1, name: 'Hoffman family' }]);
+  const { families } = useFamilies();
+
+  if (!families) return null;
 
   return (
     <ul className={styles.FamilyList}>
