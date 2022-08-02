@@ -8,7 +8,7 @@
   grid-template-columns: 20px auto 20px;
 
   label {
-    margin: 0 !important;
+    margin: -7px 0 0 10px !important;
   }
 
   button {

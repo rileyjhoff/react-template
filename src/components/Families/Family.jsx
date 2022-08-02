@@ -22,7 +22,7 @@ export default function Family({ family }) {
   const handleEditFinish = async () => {
     setEditing(false);
     if (name === family.name) return;
-    await update({ family, ...name });
+    await update({ id: family.id, name });
   };
 
   const handleKeyUp = (e) => {
@@ -46,7 +46,7 @@ export default function Family({ family }) {
       ) : (
         <>
           <button onClick={handleEditStart}>✍️</button>
-          <h2>{family.name}</h2>
+          <h2>{name}</h2>
           <button onClick={handleRemove}>ⓧ</button>
         </>
       )}
