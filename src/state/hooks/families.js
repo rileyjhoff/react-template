@@ -1,6 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
 import { FamiliesContext } from '../context/FamiliesContext.jsx';
-import { getAllFamilies } from '../services/families-service.js';
+import {
+  addFamily,
+  getAllFamilies,
+  removeFamily,
+  updateFamily,
+} from '../services/families-service.js';
+import { showSuccess, showError } from '../services/toaster.js';
 
 export function useFamilies() {
   const [error, setError] = useState(null);
@@ -28,4 +34,43 @@ export function useFamilies() {
   }, []);
 
   return { families, error };
+}
+
+export function useActions() {
+  const { dispatch } = useContext(FamiliesContext);
+
+  const add = async (family) => {
+    const { data, error } = await addFamily(family);
+    if (error) {
+      showError(error.message);
+    }
+    if (data) {
+      dispatch({ type: 'add', payload: data });
+      showSuccess(`Added ${data.name}`);
+    }
+  };
+
+  const update = async (family) => {
+    const { data, error } = await updateFamily(family);
+    if (error) {
+      showError(error.message);
+    }
+    if (data) {
+      dispatch({ type: 'update', payload: data });
+      showSuccess(`Updated ${data.name}`);
+    }
+  };
+
+  const remove = async (id) => {
+    const { data, error } = await removeFamily(id);
+    if (error) {
+      showError(error.message);
+    }
+    if (data) {
+      dispatch({ type: 'remove', payload: data });
+      showSuccess(`Removed ${data.name}`);
+    }
+  };
+
+  return { add, update, remove };
 }

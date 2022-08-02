@@ -17,8 +17,8 @@ export async function getAllFamilies() {
   return response;
 }
 
-export async function getFamilyById(id) {
-  const response = await client.from('families').select('*').match({ id }).single();
+export async function addFamily(family) {
+  const response = await client.from('families').insert([family]);
 
   return response;
 }
@@ -29,13 +29,7 @@ export async function updateFamily(family) {
   return response;
 }
 
-export async function createFamily(family) {
-  const response = await client.from('families').insert([family]);
-
-  return response;
-}
-
-export async function deleteFamily(id) {
+export async function removeFamily(id) {
   const response = await client.from('families').delete().match({ id });
 
   return response;
