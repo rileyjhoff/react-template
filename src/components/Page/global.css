@@ -2,5 +2,28 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-font: 'Montserrat', "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  
+  --black: #0A090C;
+  --white: white;
+  --background-color: #f5fdfd;
+  --header-color: #6AABD2;
+  --footer-color: #D9E4EC;
+
+  --blue-navy: #05445E;
+  --blue-misty: #385E72;
+  --blue-turquoise: #77DDF9;
+  --blue-green: #75E6DA;
+  --blue-baby: #EAFBFF;
+  --green-neon: #A3EBB1;
+  --green-kelly: #18A558;
+
+  --padding: 20px;
+}
+
 body {
+  font-family: var(--primary-font);
+  background: var(--background-color);
+  color: var(--black);
 }
