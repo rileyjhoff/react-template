@@ -5,11 +5,16 @@
   padding: 10px;
   background-color: var(--blue-baby);
   display: grid;
-  grid-template-columns: auto 20px;
+  grid-template-columns: 20px auto 20px;
+
+  label {
+    margin: 0 !important;
+  }
 
   button {
     width: fit-content;
     height: fit-content;
     background-color: var(--blue-baby);
+    cursor: pointer;
   }
 }
