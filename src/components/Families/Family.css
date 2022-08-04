@@ -1,0 +1,20 @@
+.Family {
+  min-height: 150px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--blue-baby);
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+
+  label {
+    margin: -7px 0 0 10px !important;
+  }
+
+  button {
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--blue-baby);
+    cursor: pointer;
+  }
+}
